@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<?xml-stylesheet type="text/xsl" href="transformace.xsl"?>
+<profily_programu_zbrush xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchema.xsd">
+         
+    <!--profil 1-->
+    <profil id="1">
+        <zakladni>
+            <jazyk>Čeština</jazyk>
+            <jmeno_profilu>Charaktery</jmeno_profilu>
+            <menu vlastnost="Soubor extra funkcí">Rozšířené</menu>
+            <tvurce pohlavi="muž" vek= "63 let">Petr Skočdopole</tvurce>
+            <ukladani_projektu ulozeni="C:\Zbrush\characters">Složka charekterů Zbrush</ukladani_projektu>
+            <vytvoreni_profilu>
+                <datum>2015-11-05</datum>
+                <cas>11:22:55</cas>
+            </vytvoreni_profilu>
+        </zakladni>
+        <nastaveni_modelu>
+            <tvar>
+                <vychozi_tvar>Human</vychozi_tvar>
+                <polygonalni_rozliseni polygony="50000">Vysoké</polygonalni_rozliseni>
+                <tvar_polygonu>Čtverce</tvar_polygonu>
+                <velikost_modelu>50x40x30</velikost_modelu>
+                <umisteni>0,0,0</umisteni>
+                <rotace>0,0,0</rotace>
+            </tvar>
+            <osy>
+                <umisteni>20,20,20</umisteni>
+                <rotace>0,0,0</rotace>
+                <viditelnost>false</viditelnost>
+            </osy>
+            <textura>
+                <barva>Červená</barva>
+                <odrazivost>20</odrazivost>
+                <hrbolatost>0</hrbolatost>
+                <jas>10</jas>
+                <sum>30</sum>
+                <alpha>35</alpha>
+            </textura>
+        </nastaveni_modelu>
+        <scena>
+            <pozadi typ=".jpg">Obloha</pozadi>
+            <slunce>Přednastavené</slunce>
+            <obloha>Přednastavené</obloha>
+            <stin>Ostrý</stin>
+            <mraky>Volumetrické</mraky>
+            <podlaha>Přednastavené</podlaha>  
+        </scena>
+        <render>
+            <rendrovaci_system>Standardní</rendrovaci_system>
+            <vystup>
+                <sirka>1280</sirka>
+                <vyska>720</vyska>
+                <rozliseni>72 pixelů</rozliseni>
+                <soubor typ=".png">render</soubor>
+            </vystup>
+            <vyhlazovani>
+                <vyhlazeni>Geometrie</vyhlazeni>
+                <filtr>Kubický</filtr>
+                <vlastni_velikost>true</vlastni_velikost>
+                <mira_mip mip="50">Vysoká</mira_mip>
+                <male_fragmenty>Hybridní</male_fragmenty>
+            </vyhlazovani>
+            <globalni_iluminace>
+                <primarni_metoda>Irradiance Cache</primarni_metoda>
+                <sekundarni_metoda>QMC</sekundarni_metoda>
+                <mnozstvi_odrazu pocet_odrazu="5">Vysoká</mnozstvi_odrazu>
+                <gammut>1</gammut>
+            </globalni_iluminace>
+            <ambient_occlusion>
+                <barva>Černá</barva>
+                <rozptyl>90</rozptyl>
+                <presnost>50</presnost>
+                <kontrast>0</kontrast>
+                <pouzit>true</pouzit>
+            </ambient_occlusion>
+        </render>
+    </profil>
+         
+    <!--profil 2-->
+    <profil id="2">
+        <zakladni>
+            <jazyk>Čeština</jazyk>
+            <jmeno_profilu>Stavby</jmeno_profilu>
+            <menu vlastnost="Soubor extra funkcí">Rozšířené</menu>
+            <tvurce pohlavi="muž" vek= "42 let">Jan Novák</tvurce>
+            <ukladani_projektu ulozeni="C:\Zbrush\buildings">Složka budov Zbrush</ukladani_projektu>
+            <vytvoreni_profilu>
+                <datum>2016-12-11</datum>
+                <cas>14:26:41</cas>
+            </vytvoreni_profilu>
+        </zakladni>
+        <nastaveni_modelu>
+            <tvar>
+                <vychozi_tvar>Rectangle</vychozi_tvar>
+                <polygonalni_rozliseni polygony="2000">Nízké</polygonalni_rozliseni>
+                <tvar_polygonu>Čtverce</tvar_polygonu>
+                <velikost_modelu>50x40x30</velikost_modelu>
+                <umisteni>0,0,0</umisteni>
+                <rotace>0,0,0</rotace>
+            </tvar>
+            <osy>
+                <umisteni>20,40,20</umisteni>
+                <rotace>0,0,0</rotace>
+                <viditelnost>true</viditelnost>
+            </osy>
+            <textura>
+                <barva>Modrá</barva>
+                <odrazivost>10</odrazivost>
+                <hrbolatost>50</hrbolatost>
+                <jas>10</jas>
+                <sum>30</sum>
+                <alpha>35</alpha>
+            </textura>
+        </nastaveni_modelu>
+        <scena>
+            <pozadi typ=".jpg">Obloha</pozadi>
+            <slunce>Přednastavené</slunce>
+            <obloha>Přednastavené</obloha>
+            <stin>Ostrý</stin>
+            <mraky>Volumetrické</mraky>
+            <podlaha>Přednastavené</podlaha>  
+        </scena>
+        <render>
+            <rendrovaci_system>Fyzikální</rendrovaci_system>
+            <vystup>
+                <sirka>1280</sirka>
+                <vyska>720</vyska>
+                <rozliseni>72 pixelů</rozliseni>
+                <soubor typ=".png">render</soubor>
+            </vystup>
+            <vyhlazovani>
+                <vyhlazeni>Geometrie</vyhlazeni>
+                <filtr>Kubický</filtr>
+                <vlastni_velikost>true</vlastni_velikost>
+                <mira_mip mip="50">Vysoká</mira_mip>
+                <male_fragmenty>Hybridní</male_fragmenty>
+            </vyhlazovani>
+            <globalni_iluminace>
+                <primarni_metoda>Irradiance Cache</primarni_metoda>
+                <sekundarni_metoda>Irradiance Cache</sekundarni_metoda>
+                <mnozstvi_odrazu pocet_odrazu="3">Střední</mnozstvi_odrazu>
+                <gammut>1</gammut>
+            </globalni_iluminace>
+            <ambient_occlusion>
+                <barva>Černá</barva>
+                <rozptyl>90</rozptyl>
+                <presnost>50</presnost>
+                <kontrast>0</kontrast>
+                <pouzit>true</pouzit>
+            </ambient_occlusion>
+        </render>
+    </profil>
+         
+    <!--profil 3-->
+    <profil id="3">
+        <zakladni>
+            <jazyk>Angličtina</jazyk>
+            <jmeno_profilu>Příroda</jmeno_profilu>
+            <menu vlastnost="Soubor základních funkcí">Základní</menu>
+            <tvurce pohlavi="žena" vek= "23 let">Eva Novotná</tvurce>
+            <ukladani_projektu ulozeni="C:\Zbrush\nature">Složka přírody Zbrush</ukladani_projektu>
+            <vytvoreni_profilu>
+                <datum>2016-08-17</datum>
+                <cas>22:24:35</cas>
+            </vytvoreni_profilu>
+        </zakladni>
+        <nastaveni_modelu>
+            <tvar>
+                <vychozi_tvar>Rectangle</vychozi_tvar>
+                <polygonalni_rozliseni polygony="3000">Střední</polygonalni_rozliseni>
+                <tvar_polygonu>Čtverce</tvar_polygonu>
+                <velikost_modelu>50x40x30</velikost_modelu>
+                <umisteni>0,0,0</umisteni>
+                <rotace>0,0,0</rotace>
+            </tvar>
+            <osy>
+                <umisteni>20,40,50</umisteni>
+                <rotace>0,0,0</rotace>
+                <viditelnost>true</viditelnost>
+            </osy>
+            <textura>
+                <barva>Zelená</barva>
+                <odrazivost>10</odrazivost>
+                <hrbolatost>20</hrbolatost>
+                <jas>10</jas>
+                <sum>30</sum>
+                <alpha>35</alpha>
+            </textura>
+        </nastaveni_modelu>
+        <scena>
+            <pozadi typ=".jpg">Obloha</pozadi>
+            <slunce>Přednastavené</slunce>
+            <obloha>Přednastavené</obloha>
+            <stin>Ostrý</stin>
+            <mraky>Volumetrické</mraky>
+            <podlaha>Přednastavené</podlaha>  
+        </scena>
+        <render>
+            <rendrovaci_system>Fyzikální</rendrovaci_system>
+            <vystup>
+                <sirka>1280</sirka>
+                <vyska>720</vyska>
+                <rozliseni>72 pixelů</rozliseni>
+                <soubor typ=".png">render</soubor>
+            </vystup>
+            <vyhlazovani>
+                <vyhlazeni>Geometrie</vyhlazeni>
+                <filtr>Kubický</filtr>
+                <vlastni_velikost>true</vlastni_velikost>
+                <mira_mip mip="50">Vysoká</mira_mip>
+                <male_fragmenty>Hybridní</male_fragmenty>
+            </vyhlazovani>
+            <globalni_iluminace>
+                <primarni_metoda>Irradiance Cache</primarni_metoda>
+                <sekundarni_metoda>Irradiance Cache</sekundarni_metoda>
+                <mnozstvi_odrazu pocet_odrazu="8">Vysoká</mnozstvi_odrazu>
+                <gammut>1</gammut>
+            </globalni_iluminace>
+            <ambient_occlusion>
+                <barva>Černá</barva>
+                <rozptyl>90</rozptyl>
+                <presnost>50</presnost>
+                <kontrast>0</kontrast>
+                <pouzit>true</pouzit>
+            </ambient_occlusion>
+        </render>
+    </profil>   
+         
+    <!--profil 4-->
+    <profil id="4">
+        <zakladni>
+            <jazyk>Angličtina</jazyk>
+            <jmeno_profilu>Zvířata</jmeno_profilu>
+            <menu vlastnost="Soubor extra funkcí">Rozšířené</menu>
+            <tvurce pohlavi="žena" vek= "41 let">Marie Černá</tvurce>
+            <ukladani_projektu ulozeni="C:\Zbrush\animals">Složka zvířat Zbrush</ukladani_projektu>
+            <vytvoreni_profilu>
+                <datum>2014-01-12</datum>
+                <cas>21:25:15</cas>
+            </vytvoreni_profilu>
+        </zakladni>
+        <nastaveni_modelu>
+            <tvar>
+                <vychozi_tvar>Rectangle</vychozi_tvar>
+                <polygonalni_rozliseni polygony="80000">Vysoké</polygonalni_rozliseni>
+                <tvar_polygonu>Trojúhelníky</tvar_polygonu>
+                <velikost_modelu>20x30x30</velikost_modelu>
+                <umisteni>0,0,0</umisteni>
+                <rotace>0,0,0</rotace>
+            </tvar>
+            <osy>
+                <umisteni>30,30,30</umisteni>
+                <rotace>0,0,0</rotace>
+                <viditelnost>true</viditelnost>
+            </osy>
+            <textura>
+                <barva>Černá</barva>
+                <odrazivost>20</odrazivost>
+                <hrbolatost>0</hrbolatost>
+                <jas>10</jas>
+                <sum>30</sum>
+                <alpha>40</alpha>
+            </textura>
+        </nastaveni_modelu>
+        <scena>
+            <pozadi typ=".jpg">Obloha</pozadi>
+            <slunce>Přednastavené</slunce>
+            <obloha>Přednastavené</obloha>
+            <stin>Měkký</stin>
+            <mraky>Volumetrické</mraky>
+            <podlaha>Přednastavené</podlaha>  
+        </scena>
+        <render>
+            <rendrovaci_system>Fyzikální</rendrovaci_system>
+            <vystup>
+                <sirka>1440</sirka>
+                <vyska>720</vyska>
+                <rozliseni>103 pixelů</rozliseni>
+                <soubor typ=".png">render</soubor>
+            </vystup>
+            <vyhlazovani>
+                <vyhlazeni>Geometrie</vyhlazeni>
+                <filtr>Kubický</filtr>
+                <vlastni_velikost>true</vlastni_velikost>
+                <mira_mip mip="50">Vysoká</mira_mip>
+                <male_fragmenty>Hybridní</male_fragmenty>
+            </vyhlazovani>
+            <globalni_iluminace>
+                <primarni_metoda>Irradiance Cache</primarni_metoda>
+                <sekundarni_metoda>QMC</sekundarni_metoda>
+                <mnozstvi_odrazu pocet_odrazu="5">Vysoká</mnozstvi_odrazu>
+                <gammut>2</gammut>
+            </globalni_iluminace>
+            <ambient_occlusion>
+                <barva>Černá</barva>
+                <rozptyl>90</rozptyl>
+                <presnost>50</presnost>
+                <kontrast>0</kontrast>
+                <pouzit>true</pouzit>
+            </ambient_occlusion>
+        </render>
+    </profil> 
+         
+    <!--profil 5-->
+     <profil id="5">
+        <zakladni>
+            <jazyk>Čeština</jazyk>
+            <jmeno_profilu>Nástroje</jmeno_profilu>
+            <menu vlastnost="Soubor základních funkcí">Základní</menu>
+            <tvurce pohlavi="muž" vek= "21 let">Petr Veselý</tvurce>
+            <ukladani_projektu ulozeni="C:\Zbrush\tools">Složka nástrojů Zbrush</ukladani_projektu>
+            <vytvoreni_profilu>
+                <datum>2013-06-02</datum>
+                <cas>11:35:21</cas>
+            </vytvoreni_profilu>
+        </zakladni>
+        <nastaveni_modelu>
+            <tvar>
+                <vychozi_tvar>Rectangle</vychozi_tvar>
+                <polygonalni_rozliseni polygony="2000">Nízké</polygonalni_rozliseni>
+                <tvar_polygonu>Trojúhelníky</tvar_polygonu>
+                <velikost_modelu>10x10x10</velikost_modelu>
+                <umisteni>0,0,0</umisteni>
+                <rotace>0,0,0</rotace>
+            </tvar>
+            <osy>
+                <umisteni>5,5,5</umisteni>
+                <rotace>0,0,0</rotace>
+                <viditelnost>false</viditelnost>
+            </osy>
+            <textura>
+                <barva>Šedá</barva>
+                <odrazivost>0</odrazivost>
+                <hrbolatost>70</hrbolatost>
+                <jas>0</jas>
+                <sum>30</sum>
+                <alpha>20</alpha>
+            </textura>
+        </nastaveni_modelu>
+        <scena>
+            <pozadi typ=".jpg">Obloha</pozadi>
+            <slunce>Přednastavené</slunce>
+            <obloha>Přednastavené</obloha>
+            <stin>Ostrý</stin>
+            <mraky>Volumetrické</mraky>
+            <podlaha>Přednastavené</podlaha>  
+        </scena>
+        <render>
+            <rendrovaci_system>Standardní</rendrovaci_system>
+            <vystup>
+                <sirka>1600</sirka>
+                <vyska>1200</vyska>
+                <rozliseni>100 pixelů</rozliseni>
+                <soubor typ=".png">render</soubor>
+            </vystup>
+            <vyhlazovani>
+                <vyhlazeni>Geometrie</vyhlazeni>
+                <filtr>Kubický</filtr>
+                <vlastni_velikost>false</vlastni_velikost>
+                <mira_mip mip="50">Vysoká</mira_mip>
+                <male_fragmenty>Hybridní</male_fragmenty>
+            </vyhlazovani>
+            <globalni_iluminace>
+                <primarni_metoda>Irradiance Cache</primarni_metoda>
+                <sekundarni_metoda>Irradiance Cache</sekundarni_metoda>
+                <mnozstvi_odrazu pocet_odrazu="2">Nízká</mnozstvi_odrazu>
+                <gammut>3</gammut>
+            </globalni_iluminace>
+            <ambient_occlusion>
+                <barva>Černá</barva>
+                <rozptyl>90</rozptyl>
+                <presnost>50</presnost>
+                <kontrast>0</kontrast>
+                <pouzit>true</pouzit>
+            </ambient_occlusion>
+        </render>
+    </profil> 
+</profily_programu_zbrush>

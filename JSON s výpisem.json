@@ -1,0 +1,105 @@
+
+        [
+        
+            {
+            "ID": "5",
+            "N&aacute;zev": "N&aacute;stroje",
+            "Jazyk": "Čeština",
+            "Menu": "Z&aacute;kladn&iacute;",
+            "Tvůrce": "Petr Vesel&yacute;",       
+            "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka n&aacute;strojů Zbrush",      
+            "Datum vytvořen&iacute; profilu": "2013-06-02",
+            "V&yacute;choz&iacute; tvar modelu": "Rectangle",
+            "Polygon&aacute;ln&iacute; rozlišen&iacute;": "N&iacute;zk&eacute;",
+            "Barva modelu": "Šed&aacute;",
+            "Pozad&iacute;": "Obloha",
+            "Podlaha": "Přednastaven&eacute;",
+            "Renderovac&iacute; syst&eacute;m": "Standardn&iacute;",
+            "Typ v&yacute;stupn&iacute;ho souboru": "",
+            "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Ambient occlusion": "true"                                               
+            } 
+            ,
+            {
+            "ID": "4",
+            "N&aacute;zev": "Zv&iacute;řata",
+            "Jazyk": "Angličtina",
+            "Menu": "Rozš&iacute;řen&eacute;",
+            "Tvůrce": "Marie Čern&aacute;",       
+            "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka zv&iacute;řat Zbrush",      
+            "Datum vytvořen&iacute; profilu": "2014-01-12",
+            "V&yacute;choz&iacute; tvar modelu": "Rectangle",
+            "Polygon&aacute;ln&iacute; rozlišen&iacute;": "Vysok&eacute;",
+            "Barva modelu": "Čern&aacute;",
+            "Pozad&iacute;": "Obloha",
+            "Podlaha": "Přednastaven&eacute;",
+            "Renderovac&iacute; syst&eacute;m": "Fyzik&aacute;ln&iacute;",
+            "Typ v&yacute;stupn&iacute;ho souboru": "",
+            "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "QMC",
+            "Ambient occlusion": "true"                                               
+            } 
+            ,
+            {
+            "ID": "3",
+            "N&aacute;zev": "Př&iacute;roda",
+            "Jazyk": "Angličtina",
+            "Menu": "Z&aacute;kladn&iacute;",
+            "Tvůrce": "Eva Novotn&aacute;",       
+            "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka př&iacute;rody Zbrush",      
+            "Datum vytvořen&iacute; profilu": "2016-08-17",
+            "V&yacute;choz&iacute; tvar modelu": "Rectangle",
+            "Polygon&aacute;ln&iacute; rozlišen&iacute;": "Středn&iacute;",
+            "Barva modelu": "Zelen&aacute;",
+            "Pozad&iacute;": "Obloha",
+            "Podlaha": "Přednastaven&eacute;",
+            "Renderovac&iacute; syst&eacute;m": "Fyzik&aacute;ln&iacute;",
+            "Typ v&yacute;stupn&iacute;ho souboru": "",
+            "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Ambient occlusion": "true"                                               
+            } 
+            ,
+            {
+            "ID": "2",
+            "N&aacute;zev": "Stavby",
+            "Jazyk": "Čeština",
+            "Menu": "Rozš&iacute;řen&eacute;",
+            "Tvůrce": "Jan Nov&aacute;k",       
+            "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka budov Zbrush",      
+            "Datum vytvořen&iacute; profilu": "2016-12-11",
+            "V&yacute;choz&iacute; tvar modelu": "Rectangle",
+            "Polygon&aacute;ln&iacute; rozlišen&iacute;": "N&iacute;zk&eacute;",
+            "Barva modelu": "Modr&aacute;",
+            "Pozad&iacute;": "Obloha",
+            "Podlaha": "Přednastaven&eacute;",
+            "Renderovac&iacute; syst&eacute;m": "Fyzik&aacute;ln&iacute;",
+            "Typ v&yacute;stupn&iacute;ho souboru": "",
+            "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Ambient occlusion": "true"                                               
+            } 
+            ,
+            {
+            "ID": "1",
+            "N&aacute;zev": "Charaktery",
+            "Jazyk": "Čeština",
+            "Menu": "Rozš&iacute;řen&eacute;",
+            "Tvůrce": "Petr Skočdopole",       
+            "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka charekterů Zbrush",      
+            "Datum vytvořen&iacute; profilu": "2015-11-05",
+            "V&yacute;choz&iacute; tvar modelu": "Human",
+            "Polygon&aacute;ln&iacute; rozlišen&iacute;": "Vysok&eacute;",
+            "Barva modelu": "Červen&aacute;",
+            "Pozad&iacute;": "Obloha",
+            "Podlaha": "Přednastaven&eacute;",
+            "Renderovac&iacute; syst&eacute;m": "Standardn&iacute;",
+            "Typ v&yacute;stupn&iacute;ho souboru": "",
+            "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+            "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "QMC",
+            "Ambient occlusion": "true"                                               
+            } 
+              
+        ]     
+    

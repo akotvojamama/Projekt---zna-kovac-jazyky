@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name='description' content="Semestrální projekt - značkovací jazyky">
+        <meta name="Autor" content="Michael Skřivánek">
+        <title>Dokumentace programu Zbrush</title>
+    </head>
+    <body>
+        <header>
+            <h1>Dokumentace k programu Zbrush - Michael Skřivánek</h1>
+        </header>
+    <nav>
+        <header>
+            <h2>Obsah:</h2>
+        </header>
+        <ul>
+            <li><a href="#uvod">Úvod</a></li>
+            <li><a href="#pouzite_aplikace">Použité aplikace</a></li>
+            <li><a href="#pouzite_webove_stranky">Použité webové stránky</a></li>
+            <li><a href="XMLSchema.xsd"></a>
+            <li><a href="#transformace">Popis transformace</a></li>
+            <li><a href="#popis_atributu_elementu">Popis atributů a elementů</a></li>
+            <li><a href="#zaver">Závěr projektu</a></li>
+        </ul>
+    </nav>          
+    <main>***************************************************************************************************************************************************************************
+        <section id="uvod">
+            <article>
+                <h2>Úvod</h2>
+                <p> Tento semestrální projekt obsahuje XML soubor sloužící ke konfiguraci profilů 3D programu Zbrush. Tyto profily slouží k lepšímu startu
+                projektu a usnadňují tak modelářům práci s úvodním nastavením programu. V jednotlivých profilek je možné nalézt konfiguraci, jako je např.
+                jazyk programu, ale také například cestu uložení projektu, nastavení výchozího modelu, scény, renderu a další. </p>
+            </article>      
+        </section>
+        <section id="pouzite_aplikace">
+            <article>
+                <h2>Použité aplikace</h2>
+                <p>
+                    <ul>
+                        <li><a href="https://netbeans.org/">NetBeans IDE</a></li>
+                        <li><a href="http://www.pspad.com/cz/">PSPad</a></li>
+                        <li><a href="https://www.google.com/chrome/">Google Chrome</a></li>
+                        <li><a href="https://www.mozilla.org/cs/firefox/">Mozilla Firefox</a></li>
+                    </ul>             
+            </article>
+        </section>
+        <section id="pouzite_webove_stranky">
+            <article>
+              <h2>Použité webové stránky</h2>
+              <p>
+              <ul>
+                <li><a href="https://www.w3schools.com/">W3Schools, XML validátor</a></li>
+                <li><a href="http://www.utilities-online.info/xsdvalidation/#.WPdgzclBo2w">XML, XSD validátor</a></li>
+                <li><a href="https://jsonformatter.curiousconcept.com/">JSON validátor</a></li>
+              </ul>             
+            </article>
+        </section>
+        <section id="transformace">
+            <article>
+                <h2>Popis transformace</h2>
+                <p>V projektu jsou vytvořeny 2 transformace. Transformace s podmínkou má za úkol vypsat konkrétní profil podle jména (v tomto případě stavby).
+                Naopak výpisová transformace má za úkol vypsat určité parametry všech profilů seřazených sestupně podle jejich ID.</p>
+            </article>      
+        </section>
+        <section id="popis_atributu_elementu">
+            <article>
+                <h2>Popis atributů a elementů</h2>
+                <h3>Atributy</h3>
+                <table title="Atributy">
+                    <tr>
+                        <td><b>Název</b></td>
+                        <td><b>Popis</b></td>
+                    </tr>
+                    <tr>                       
+                        <td>id</td>
+                        <td>ID existujícího profilu</td>
+                    </tr>
+                    <tr>                       
+                        <td>typ</td>
+                        <td>Vybraný typ souboru</td>
+                    </tr>
+                    <tr>                       
+                        <td>vlastnost</td>
+                        <td>Vlastnost rozšíření funkcí programu</td>
+                    </tr>
+                    <tr>                       
+                        <td>pohlavi</td>
+                        <td>Pohlaví tvůrce profilu</td>
+                    </tr>
+                    <tr>                       
+                        <td>vek</td>
+                        <td>Věk tvůrce profilu</td>
+                    </tr>
+                    <tr>                       
+                        <td>ulozeni</td>
+                        <td>Cesta uložení projektu</td>
+                    </tr>
+                    <tr>                       
+                        <td>polygony</td>
+                        <td>Počet polygonů objektu</td>
+                    </tr>
+                    <tr>                       
+                        <td>mip</td>
+                        <td>Míra vyhlazování</td>
+                    </tr>
+                    <tr>                       
+                        <td>pocet_odrazu</td>
+                        <td>Počet odrazů světla při globální iluminaci</td>
+                    </tr>                                                        
+                </table>  
+                <h3>Použité elementy</h3>
+                <table title="Elementy">
+                    <tr>
+                        <td><b>Název</b></td>
+                        <td><b>Popis</b></td>
+                        <td><b>Omezení</b></td>
+                    </tr>
+                    <tr>                       
+                        <td>profil</td>
+                        <td>Kmenový element profilů</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>zakladni</td>
+                        <td>Kmenový element základního nastavení</td>
+                        <td>Nemá omezení</td>
+                    </tr> 
+                    <tr>                       
+                        <td>jazyk</td>
+                        <td>Nastavený jazyk programu při daném profilu</td>
+                        <td>Čeština, Angličtina, Němčina</td>
+                    </tr>
+                    <tr>                       
+                        <td>jmeno_profilu</td>
+                        <td>Určuje jméno profilu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>menu</td>
+                        <td>Typ menu funkcí</td>
+                        <td>Základní, Rozšířené</td>
+                    </tr>
+                    <tr>                       
+                        <td>tvurce</td>
+                        <td>Určuje tvůrce profilu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>ukladani_projektu</td>
+                        <td>Určuje umístění ukládání projektů</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>vytvoreni_profilu</td>
+                        <td>Kmenový element data a času vytvoření profilu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>datum</td>
+                        <td>Určuje datum vytvoření profilu</td>
+                        <td>date</td>
+                    </tr>
+                    <tr>                       
+                        <td>cas</td>
+                        <td>Určuje čas vytvoření profilu</td>
+                        <td>time</td>
+                    </tr> 
+                    <tr>                       
+                        <td>nastaveni_modelu</td>
+                        <td>Kmenový element nastavení modelu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>tvar</td>
+                        <td>Kmenový element tvaru objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>vychozi_tvar</td>
+                        <td>Výchozí tvar objektu</td>
+                        <td>Human, Rectangle</td>
+                    </tr>
+                    <tr>                       
+                        <td>tvar_polygonu</td>
+                        <td>Výchozí tvar polygonů</td>
+                        <td>Čtverce, Trojúhelníky</td>
+                    </tr>
+                    <tr>                       
+                        <td>velikost_modelu</td>
+                        <td>Velikost výchozího modelu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>umisteni</td>
+                        <td>Souřadnice výchozího modelu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>rotace</td>
+                        <td>Rotace výchozího modelu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>osy</td>
+                        <td>Kmenový element nastavení os</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>viditelnost</td>
+                        <td>Viditelnost os v pohledu</td>
+                        <td>boolean</td>
+                    </tr>               
+                    <tr>                       
+                        <td>textura</td>
+                        <td>Kmenový element textury objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>               
+                    <tr>                       
+                        <td>barva</td>
+                        <td>Nastavení výchozí barvy objektu</td>
+                        <td>Červená, Modrá, Zelená, Hnědá, Černá, Šedá</td>
+                    </tr>               
+                    <tr>                       
+                        <td>odrazivost</td>
+                        <td>Určuje odrazivost objektu</td>
+                        <td>integer (0-100)</td>
+                    </tr>   
+                    <tr>                       
+                        <td>hrbolatost</td>
+                        <td>Určuje hrbolatost objektu</td>
+                        <td>integer (0-100)</td>
+                    </tr>               
+                    <tr>                       
+                        <td>jas</td>
+                        <td>Určuje jas objektu</td>
+                        <td>integer (0-100)</td>
+                    </tr>               
+                    <tr>                       
+                        <td>sum</td>
+                        <td>Určuje šum objektu</td>
+                        <td>integer (0-100)</td>
+                    </tr>               
+                    <tr>                       
+                        <td>alpha</td>
+                        <td>Určuje alphu objektu</td>
+                        <td>integer (0-100)</td>
+                    </tr>               
+                    <tr>                       
+                        <td>scena</td>
+                        <td>Kmenový element sceny objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>                           
+                    <tr>                       
+                        <td>pozadi</td>
+                        <td>Typ pozadí projektu</td>
+                        <td>Obloha, Barva</td>
+                    </tr>
+                    <tr>                       
+                        <td>slunce</td>
+                        <td>Nastavení slunce projektu</td>
+                        <td>Přednastavené, jiné</td>
+                    </tr> 
+                    <tr>                       
+                        <td>obloha</td>
+                        <td>Nastavení oblohy projektu</td>
+                        <td>Přednastavené, jiné</td>
+                    </tr>                            
+                    <tr>                       
+                        <td>stin</td>
+                        <td>Nastavení stínů projektu</td>
+                        <td>Ostrý, Měkký, Oblast</td>
+                    </tr>
+                    <tr>                       
+                        <td>mraky</td>
+                        <td>Nastavení mraků projektu</td>
+                        <td>Volumetrické, jiné</td>
+                    </tr>
+                    <tr>                       
+                        <td>podlaha</td>
+                        <td>Nastavení podlahy projektu</td>
+                        <td>Přednastavené, jiné</td>
+                    </tr>
+                    <tr>                       
+                        <td>render</td>
+                        <td>Kmenový element nastavení renderu objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>rendrovaci_system</td>
+                        <td>Určuje renderovací systém profilu</td>
+                        <td>Standardní, Fyzikální, jiný</td>
+                    </tr>
+                    <tr>                       
+                        <td>vystup</td>
+                        <td>Kmenový element vystupu renderu objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>vyska</td>
+                        <td>Výška výstupního obrazu renderu</td>
+                        <td>integer</td>
+                    </tr>
+                    <tr>                       
+                        <td>sirka</td>
+                        <td>Šířka výstupního obrazu renderu</td>
+                        <td>integer</td>
+                    </tr>
+                    <tr>                       
+                        <td>rozliseni</td>
+                        <td>Určuje rozlišení obrazu</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>soubor</td>
+                        <td>Určuje jméno souboru</td>
+                        <td>string</td>
+                    </tr>
+                    <tr>                       
+                        <td>vyhlazovani</td>
+                        <td>Kmenový element vyhlazovani objektu</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>vyhlazeni</td>
+                        <td>Typ vyhlazování projektu</td>
+                        <td>Geometrie, Vlastní</td>
+                    </tr>
+                    <tr>                       
+                        <td>filtr</td>
+                        <td>Určuje filtr vyhlazení projektu</td>
+                        <td>Kubický, Sférický, UV</td>
+                    </tr>
+                    <tr>                       
+                        <td>vlastni_velikost</td>
+                        <td>Vlastní velikost vyhlazení</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>                       
+                        <td>mira_mip</td>
+                        <td>Míra úrovně mip projektu</td>
+                        <td>Vysoká, Střední, Nízká</td>
+                    </tr>
+                    <tr>                       
+                        <td>male_fragmenty</td>
+                        <td>Určuje velikost fragmentů projektu</td>
+                        <td>Hybridní, Standardní</td>
+                    </tr>
+                    <tr>                       
+                        <td>globalni_iluminace</td>
+                        <td>Kmenový element globální iluminace</td>
+                        <td>Nemá omezení</td>
+                    </tr>
+                    <tr>                       
+                        <td>primarni_metoda</td>
+                        <td>Primární metoda iluminace</td>
+                        <td>QMC, Irradiance Cache</td>
+                    </tr>                
+                    <tr>                       
+                        <td>sekundarni_metoda</td>
+                        <td>Sekundární metoda iluminace</td>
+                        <td>QMC, Irradiance Cache</td>
+                    </tr>                
+                    <tr>                       
+                        <td>mnozstvi_odrazu</td>
+                        <td>Množství odrazu iluminace</td>
+                        <td>Vysoké, Střední, Nízké</td>
+                    </tr>    
+                    <tr>                       
+                        <td>gammut</td>
+                        <td>Určuje gammut projektu</td>
+                        <td>integer</td>
+                    </tr>                
+                    <tr>                       
+                        <td>ambient_occlusion</td>
+                        <td>Kmenový element určuje úroveň zašpinění hran</td>
+                        <td>Nemá omezení</td>
+                    </tr>                
+                    <tr>                       
+                        <td>rozptyl</td>
+                        <td>Určuje rozptyl zašpinění</td>
+                        <td>integer (0-100)</td>
+                    </tr>                
+                    <tr>                       
+                        <td>barva</td>
+                        <td>Určuje barvu zašpinění</td>
+                        <td>integer (0-100)</td>
+                    </tr>                
+                    <tr>                       
+                        <td>kontrast</td>
+                        <td>Určuje kontrast zašpinění</td>
+                        <td>integer (0-100)</td>
+                    </tr>                 
+                    <tr>                       
+                        <td>pouzit</td>
+                        <td>Poutito zašpinění</td>
+                        <td>boolean</td>
+                    </tr>                                                                                                                         
+                </table>
+            </article>
+        </section>
+        <section id="zaver">
+            <article>
+                <h2>Závěr</h2>
+                <p>Při tvorbě projektu jsem si rozšíril znalosti s tvorbou XML souborů, jejich schémat a transformací. Rozšířil jsem si také znalosti ohledně programů 
+                určených právě pro tvorbu těchto souborů.</p>
+            </article>      
+        </section>
+    </main>
+        <footer>
+            Vytvořil: Michael Skřivánek *ČZU PEF INFO8 - 2. ročník*
+        </footer>
+    </body>
+</html>

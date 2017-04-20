@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="profily_programu_zbrush">
+    <xs:complexType>
+      <xs:sequence>
+        <!--Jednotlivé profily-->
+        <xs:element name="profil" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <!--Základní charakteristika-->
+              <xs:element name="zakladni">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="language" name="jazyk"/>
+                    <xs:element type="xs:string" name="jmeno_profilu"/>
+                    <xs:element name="menu">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="menu_funkci">
+                            <xs:attribute type="xs:string" name="vlastnost" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="tvurce">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="pohlavi" use="optional"/>
+                            <xs:attribute type="xs:string" name="vek" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ukladani_projektu">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="ulozeni" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="vytvoreni_profilu">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:date" name="datum"/>
+                          <xs:element type="xs:time" name="cas"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--Nastavení modelu profilu-->
+              <xs:element name="nastaveni_modelu">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tvar">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="tvar_objektu" name="vychozi_tvar"/>
+                          <xs:element name="polygonalni_rozliseni">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="poly_rozliseni">
+                                  <xs:attribute type="xs:int" name="polygony" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="poly_tvar" name="tvar_polygonu"/>
+                          <xs:element type="xs:string" name="velikost_modelu"/>
+                          <xs:element type="xs:string" name="umisteni"/>
+                          <xs:element type="xs:string" name="rotace"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="osy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="umisteni"/>
+                          <xs:element type="xs:string" name="rotace"/>
+                          <xs:element type="xs:boolean" name="viditelnost"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="textura">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="color" name="barva"/>
+                          <xs:element type="procenta" name="odrazivost"/>
+                          <xs:element type="procenta" name="hrbolatost"/>
+                          <xs:element type="procenta" name="jas"/>
+                          <xs:element type="procenta" name="sum"/>
+                          <xs:element type="procenta" name="alpha"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--Nastavení scény profilu-->
+              <xs:element name="scena">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="pozadi">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="typ_pozadi">
+                            <xs:attribute type="xs:string" name="typ" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="soubor" name="slunce"/>
+                    <xs:element type="soubor" name="obloha"/>
+                    <xs:element type="stiny" name="stin"/>
+                    <xs:element type="mracky" name="mraky"/>
+                    <xs:element type="soubor" name="podlaha"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--Nastavení renderu profilu-->
+              <xs:element name="render">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="render_system" name="rendrovaci_system"/>
+                    <xs:element name="vystup">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:integer" name="sirka"/>
+                          <xs:element type="xs:integer" name="vyska"/>
+                          <xs:element type="xs:string" name="rozliseni"/>
+                          <xs:element name="soubor">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="typ" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="vyhlazovani">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="vyhladit" name="vyhlazeni"/>
+                          <xs:element type="filtrik" name="filtr"/>
+                          <xs:element type="xs:boolean" name="vlastni_velikost"/>
+                          <xs:element name="mira_mip">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="mira">
+                                  <xs:attribute type="xs:string" name="mip" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="fragmenty" name="male_fragmenty"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="globalni_iluminace">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="iluminate" name="primarni_metoda"/>
+                          <xs:element type="iluminate" name="sekundarni_metoda"/>
+                          <xs:element name="mnozstvi_odrazu">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="mira">
+                                  <xs:attribute type="xs:integer" name="pocet_odrazu" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:integer" name="gammut"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ambient_occlusion">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="color" name="barva"/>
+                          <xs:element type="procenta" name="rozptyl"/>
+                          <xs:element type="procenta" name="presnost"/>
+                          <xs:element type="procenta" name="kontrast"/>
+                          <xs:element type="xs:boolean" name="pouzit"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Definice omezení -->
+  <xs:simpleType name="language">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Čeština" />
+         <xs:enumeration value="Angličtina" />
+         <xs:enumeration value="Němčina" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="menu_funkci">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Základní" />
+         <xs:enumeration value="Rozšířené" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tvar_objektu">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Human" />
+         <xs:enumeration value="Rectangle" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="poly_rozliseni">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Vysoké" />
+         <xs:enumeration value="Střední" />
+         <xs:enumeration value="Nízké" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="poly_tvar">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Čtverce" />
+         <xs:enumeration value="Trojúhelníky" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="color">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Červená" />
+         <xs:enumeration value="Modrá" />
+         <xs:enumeration value="Zelená" />
+         <xs:enumeration value="Šedá" />
+         <xs:enumeration value="Černá" />
+         <xs:enumeration value="Hnědá" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="procenta">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="0" />
+         <xs:maxInclusive value="100" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="typ_pozadi">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Obloha" />
+         <xs:enumeration value="Barva" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="soubor">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Přednastavené" />
+         <xs:enumeration value="Jiné" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stiny">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Ostrý" />
+         <xs:enumeration value="Měkký" />
+         <xs:enumeration value="Oblast" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="mracky">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Volumetrické" />
+         <xs:enumeration value="Jiné" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="render_system">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Standardní" />
+         <xs:enumeration value="Fyzikální" />
+         <xs:enumeration value="Jiný" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="vyhladit">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Geometrie" />
+         <xs:enumeration value="Vlastní" />
+      </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="filtrik">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Kubický" />
+         <xs:enumeration value="Sférický" />
+         <xs:enumeration value="UV" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="mira">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Vysoká" />
+         <xs:enumeration value="Střední" />
+         <xs:enumeration value="Nízká" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fragmenty">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Hybridní" />
+         <xs:enumeration value="Standardní" />
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="iluminate">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Irradiance Cache" />
+         <xs:enumeration value="QMC" />
+      </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,25 @@
+
+        [
+        
+                {
+                "ID": "2",
+                "N&aacute;zev": "Stavby",
+                "Jazyk": "Čeština",
+                "Menu": "Rozš&iacute;řen&eacute;",
+                "Tvůrce": "Jan Nov&aacute;k",       
+                "Ukl&aacute;d&aacute;n&iacute; projektu": "Složka budov Zbrush",      
+                "Datum vytvořen&iacute; profilu": "2016-12-11",
+                "V&yacute;choz&iacute; tvar modelu": "Rectangle",
+                "Polygon&aacute;ln&iacute; rozlišen&iacute;": "N&iacute;zk&eacute;",
+                "Barva modelu": "Modr&aacute;",
+                "Pozad&iacute;": "Obloha",
+                "Podlaha": "Přednastaven&eacute;",
+                "Renderovac&iacute; syst&eacute;m": "Fyzik&aacute;ln&iacute;",
+                "Typ v&yacute;stupn&iacute;ho souboru": "",
+                "Glob&aacute;ln&iacute; iluminace - prim&aacute;rn&iacute; metoda": "Irradiance Cache",
+                "Glob&aacute;ln&iacute; iluminace - sekund&aacute;rn&iacute; metoda": "Irradiance Cache",
+                "Ambient occlusion": "true"                                              
+                } 
+                ,  
+        ]     
+    
